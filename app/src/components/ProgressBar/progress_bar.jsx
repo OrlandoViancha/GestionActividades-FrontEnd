@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { MeasurePercentage } from "./measurePercentage";
 import "./progress_bar.css";
-const ProgressBar = ({ totalActivities, activitiesCompleted }) => {
+const ProgressBar = ({ id, totalActivities, activitiesCompleted }) => {
   useEffect(() => {
     
-    const barProgress = document.querySelector('.progress-bar');
+    const barProgress = document.getElementById(id);
+    
     const percentage = activitiesCompleted / totalActivities;
+    console.log(activitiesCompleted)
     barProgress.style.width = (percentage*100) + "%";
     
   }, []);
@@ -15,7 +17,7 @@ const ProgressBar = ({ totalActivities, activitiesCompleted }) => {
    
       <div className="container">
         <div className="progress-bar__container">
-          <div className="progress-bar">
+          <div id={ id} className="progress-bar">
           
           </div>
         </div>

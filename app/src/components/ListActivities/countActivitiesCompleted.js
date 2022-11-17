@@ -1,7 +1,7 @@
 const countActivitiesCompleted = (Activities, Student) => {
     var suma = 0;
     Activities.map(activity => {
-        const query = Student.activities.find(value => value === activity._id);
+        const query = Student.activities.find(value => value.id === activity._id);
        
         if (query) {
          

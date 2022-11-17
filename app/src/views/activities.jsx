@@ -26,8 +26,8 @@ const Activities = () => {
       <>
           {
               activities.length > 0
-                  ? <ProgressBar totalActivities={activities.length} activitiesCompleted={countActivitiesCompleted(activities,student)} />
-                  :<h1>No hay tareas por realizar</h1>
+          ? <ProgressBar id={matter.id } totalActivities={activities.length} activitiesCompleted={countActivitiesCompleted(activities,student)} />
+                  :console.log(activities)
           }
       
       <ListActivities>
